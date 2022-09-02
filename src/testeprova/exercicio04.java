@@ -22,8 +22,11 @@ public class exercicio04 {
             if (par == 0){
                 System.out.println("Valor inválido, digite outro diferente de zero (0)");
             }
+            else if( par %2 != 0){
+                System.out.println("Digite apenas numeros pares!!!!!!!!");
+            }
             else{
-            vetorPar[linha] = scan .nextInt();
+            vetorPar[linha] = par;
             linha = linha+1;
             }
         }
@@ -35,19 +38,23 @@ public class exercicio04 {
             if (impar == 0){
                 System.out.println("Valor inválido, digite outro diferente de zero (0)");
             }
+             else if( impar %2 == 0){
+                System.out.println("Digite apenas numeros impares!!!!!!!!");
+            }
             else{
-            vetorImpar[linha] = scan .nextInt();
+            vetorImpar[linha] = impar;
             linha = linha+1;
             }
         }
         System.out.println("Os números pares digitados são: ");
         for (int linha = 0; linha < 7; linha++) {
-            System.out.println(vetorPar[linha]+", ");           
+            System.out.print(vetorPar[linha]+", ");           
         }
+        System.out.println("");
         
         System.out.println("Os números ímpares digitados são: ");
         for (int linha = 0; linha < 7; linha++) {
-            System.out.println(vetorImpar[linha]+", ");
+            System.out.print(vetorImpar[linha]+", ");
         }
     }
 }
